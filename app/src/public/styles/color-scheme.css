@@ -1,0 +1,12 @@
+:root {
+  --button-bg-color: transparent;
+  --button-bg-color--hover: white;
+  --button-text-color: white;
+  --button-text-color--hover: #fa6673;
+  --header-text-color: white;
+  --body-bg: linear-gradient(45deg, #fe5196, #f77062);
+  --body-text: white;
+  --input-bg-color: white;
+  --input-text-color: #fa6673;
+  --placeholder-text-color: #d4d4d4;
+}

@@ -2,14 +2,22 @@
   "name": "journal",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.1",
     "express": "^4.17.0",
+    "mini-css-extract-plugin": "^0.6.0",
     "nodemon": "^1.19.0",
     "nunjucks": "^3.2.0",
     "pg": "^7.11.0",
     "sequelize": "^5.8.6",
-    "sequelize-cli": "^5.4.0"
+    "sequelize-cli": "^5.4.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
   },
   "scripts": {
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack",
     "dev": "nodemon",
     "gen": "sequelize migration:generate",
     "migrate": "sequelize db:migrate"

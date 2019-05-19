@@ -10,7 +10,7 @@ const Post = require('./models').Post;
 const app = express();
 app.use(bodyParser.json());
 app.use('/api/post', postRouter);
-
+app.use(express.static(path.resolve(__dirname, 'dist')));
 nunjucks.configure(path.resolve(__dirname, 'views'), {
     autoescape: true,
     express: app,
@@ -23,7 +23,7 @@ app.get('/', async (req, res) => {
     })
 });
 
-app.get('/:id', async (req, res) => {
+app.get('/post/:id', async (req, res) => {
     const post = await Post.findByPk(req.params.id);
     if (!post) {
         res.sendStatus(404);
