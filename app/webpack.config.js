@@ -5,7 +5,8 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
     mode: process.env.NODE_ENV,
     entry: [
-        './src/public/styles/index.css'
+        './src/public/styles/index.css',
+        './src/public/scripts/index.js'
     ],
     module: {
         rules: [
@@ -33,6 +34,8 @@ module.exports = {
         ])
     ],
     output: {
+        filename: '[name].bundle.js',
+        chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'src/dist')
     }
 };

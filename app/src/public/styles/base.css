@@ -47,6 +47,13 @@ input[type="submit"] {
   width: auto;
 }
 
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--button-bg-color--hover);
+  color: var(--button-text-color--hover);
+  cursor: pointer;
+}
+
 textarea {
   font-family: 'Merriweather', sans-serif;
   font-size: 1em;
