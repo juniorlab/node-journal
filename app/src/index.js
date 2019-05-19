@@ -3,10 +3,17 @@ const express = require('express');
 const db = require('./models').db;
 const bodyParser = require('body-parser');
 const postRouter = require('./api/post');
+const nunjucks = require('nunjucks');
+const path = require('path');
 
 const app = express();
 app.use(bodyParser.json());
 app.use('/api/post', postRouter);
+
+nunjucks.configure(path.resolve(__dirname, 'views'), {
+    autoescape: true,
+    express: app,
+});
 
 db.authenticate()
     .then(() => {
