@@ -1,2 +1,6 @@
 @import "base.css";
 @import "color-scheme.css";
+@import "pages/home.css";
+@import "pages/page.css";
+@import "pages/post.css";
+@import "post.css";

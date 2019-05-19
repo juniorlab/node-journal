@@ -1,0 +1,16 @@
+.post--edit__header input {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.post--edit {
+  margin-top: 40px;
+}
+
+.post--edit__footer {
+  margin-top: 15px;
+}
+
+.post--edit__footer input {
+  margin-right: 10px;
+}

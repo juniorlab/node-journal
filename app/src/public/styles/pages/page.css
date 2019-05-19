@@ -1,0 +1,10 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.page-content {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 15px;
+}

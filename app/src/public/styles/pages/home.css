@@ -1,0 +1,11 @@
+.home__title {
+  display: flex;
+  font-size: 2.9em;
+  justify-content: center;
+  margin: 60px 0 0 0;
+}
+
+.home__title::selection {
+  background-color: var(--header-text-color);
+  color: var(--body-text)
+}
