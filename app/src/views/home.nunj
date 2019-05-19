@@ -1,0 +1,45 @@
+{% extends "./base.nunj" %}
+
+{% block title %}
+    Дневник
+{% endblock %}
+
+{% block body %}
+<main class="page-wrapper">
+    <section class="page-content home">
+        <h1 class="home__title">
+            Journal
+        </h1>
+        <div class="post new-post">
+            <form id="newPost">
+                <div class="new-post__header">
+                    <input type="text" placeholder="Заголовок" name="title">
+                    <input type="submit" id="newPostSubmit" value="Добавить">
+                </div>
+                <div class="new-post__body">
+                    <textarea name="body"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="posts" id="posts">
+            {% for post in posts %}
+                <a href="/{{ post.id }}">
+                    <div class="post">
+                        <div class="post__header">
+                            <div class="post__header__title">
+                                {{ post.title }}
+                            </div>
+                            <div class="post__header__date">
+                                {{ post.createdAt }}
+                            </div>
+                        </div>
+                        <div class="post__body">
+                            {{ post.body }}
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+{% endblock %}
