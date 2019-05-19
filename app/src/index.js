@@ -23,6 +23,17 @@ app.get('/', async (req, res) => {
     })
 });
 
+app.get('/:id', async (req, res) => {
+    const post = await Post.findByPk(req.params.id);
+    if (!post) {
+        res.sendStatus(404);
+    } else {
+        res.render('post.nunj', {
+            post,
+        })
+    }
+});
+
 db.authenticate()
     .then(() => {
         console.log('Connection to db established');

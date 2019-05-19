@@ -1,0 +1,24 @@
+{% extends "base.nunj" %}
+
+{% block title %}
+    Edit post "{{ post.title }}"
+{% endblock %}
+
+{% block body %}
+    <main class="page-wrapper">
+        <section class="page-content post--edit">
+            <form id="editPost">
+                <div class="post--edit__header">
+                    <input type="text" value="{{ post.title }}" name="title">
+                </div>
+                <div class="post--edit__body">
+                    <textarea name="bosy">{{ post.body }}</textarea>
+                </div>
+                <div class="post--edit__footer">
+                    <input type="submit" id="editPostSubmit" value="Сохранить">
+                    <button type="button" id="deletePostButton">Удалить</button>
+                </div>
+            </form>
+        </section>
+    </main>
+{% endblock %}
