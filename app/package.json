@@ -1,0 +1,12 @@
+{
+  "name": "journal",
+  "dependencies": {
+    "pg": "^7.11.0",
+    "sequelize": "^5.8.6",
+    "sequelize-cli": "^5.4.0"
+  },
+  "scripts": {
+    "gen": "sequelize migration:generate",
+    "migrate": "sequelize db:migrate"
+  }
+}
