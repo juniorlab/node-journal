@@ -12,7 +12,7 @@
                     <input type="text" value="{{ post.title }}" name="title">
                 </div>
                 <div class="post--edit__body">
-                    <textarea name="bosy">{{ post.body }}</textarea>
+                    <textarea name="body">{{ post.body }}</textarea>
                 </div>
                 <div class="post--edit__footer">
                     <input type="submit" id="editPostSubmit" value="Сохранить">
